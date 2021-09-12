@@ -1,3 +1,5 @@
+//2. We r gonna put everything that we´ve learned all together. We r gonna send and HTML file so we need to
+//access that file. In order to do that we need to import the file system module. So create const fs and ofc const server.
 
 const http = require("http");
 const fs = require("fs");
@@ -22,7 +24,7 @@ const server = http.createServer((req, res) => {
       res.statusCode = 404;
       break;
   }
-
+//2.1. This is if u wanna read the file. Iinicialmente iba debajo de setheader.
   fs.readFile(path, (err, data) => {
     if (err) {
       console.error(err);
