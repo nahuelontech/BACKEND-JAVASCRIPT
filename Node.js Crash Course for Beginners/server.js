@@ -1,5 +1,4 @@
-//1.Vamos a ver un BASIC HELLO WORLD. First we write the const below. node js comes with a bunch of built-in modules
-//and we need to import them as needed. By default node.js uses commonjs which has this require syntax.
+
 const http = require("http");
 const fs = require("fs");
 
