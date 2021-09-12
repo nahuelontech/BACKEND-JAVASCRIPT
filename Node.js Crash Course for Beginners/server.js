@@ -5,21 +5,23 @@ const http = require("http");
 const fs = require("fs");
 
 const PORT = process.env.PORT || 3000;
-
+//3. Let´s look at some basic routing. Right now we´re sending this file no matter what url or method that we r using.
+//If we´d go to the browser, localhost: and if we write slash about we´r still getting the same file/webpage. We wanna be able
+// to route certain files to certain urls. 
 const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/html");
-
+//3.1. Después de definir las rutas, solo tenemos q escribir los html asociados.
   let path = "./";
   switch (req.url) {
-    case "/":
+    case "/": // if its the route directory
       path += "index.html";
       res.statusCode = 200;
       break;
-    case "/about":
+    case "/about": // in case if we write this in the browser. WWe allow it it visit this /about
       path += "about.html";
       res.statusCode = 200;
       break;
-    default:
+    default: //tmb podemos cambiar esto pero por ahora no me interesa
       path += "404.html";
       res.statusCode = 404;
       break;
@@ -34,5 +36,5 @@ const server = http.createServer((req, res) => {
     }
   });
 });
-
+//FINAL.en vez de parar nuestro servidor y reestablecerlo, nodemon nos deja hacerlo automatico.
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
