@@ -1,9 +1,9 @@
 const path = require('path');
 
-// Base file name
+// Base file name       TONTERIAS DE Q EL CMD T DIGA EL NOMBRE DEL ARCHIVO Y SU RUTA, Y SI PONES BASENAME SOLO TE DIRA EL NOMBRE DEL ARCHIVO
 console.log(path.basename(__filename));
 
-// Directory name
+// Directory name. 
 console.log(path.dirname(__filename));
 
 // File extension
