@@ -10,13 +10,13 @@ const myUrl = new URL('http://mywebsite.com/hello.html?id=100&status=active');
 console.log(myUrl.href);
 console.log(myUrl.toString());
 
-// Host (root domain)
+// Host (root domain) ->mywebsite.com here it will say 8000
 console.log(myUrl.host);
 
-// Hostname (does not get port)
+// Hostname (does not get port) -> doesnt get the 8000
 console.log(myUrl.hostname);
 
-// Pathname
+// Pathname    
 console.log(myUrl.pathname);
 
 // Serialized query
